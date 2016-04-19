@@ -6,3 +6,7 @@ var mongoose = require('mongoose'),
       price: Number,
       image: String
     })
+
+    module.exports = {
+      Product: mongoose.model('Products', productSchema)
+    }

@@ -1,11 +1,24 @@
-var userdb = require('../models/user-model.js')
+var db = require('../models/user-model.js')
 
-module.exports{
+module.exports = {
   userController: {
     create: function(req,res){
       console.log("making new user")
-      db.user.insert({}, function(err,user){
+      db.User.insert({}, function(err,user){
         if(err){
+          res.json(err)
+        } else {
+          res.json(user)
+        }
+      })
+    },
+    get: function(req,res){
+      console.log('getting user')
+      db.User.find({}, function(err,user){
+        console.log(user)
+        if(err){
+          res.json(err)
+        } else {
           res.json(user)
         }
       })
