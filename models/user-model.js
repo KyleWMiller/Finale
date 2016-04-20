@@ -30,7 +30,7 @@ var mongoose = require('mongoose'),
     userSchema.methods.checkPassword = function(pw){
       // Load hash from your password DB.
       var user = this
-      return bcrypt.compareSync(pw, user.password); // false
+      return bcrypt.compareSync(pw, user.password); 
     }
 
 

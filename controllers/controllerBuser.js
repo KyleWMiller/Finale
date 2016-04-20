@@ -1,4 +1,6 @@
-var db = require('../models/user-model.js')
+var db   = require('../models/user-model.js'),
+    jwt  = require('jsonwebtoken'),
+  secret = "this is so secret"
 
 module.exports = {
   userController: {
@@ -20,11 +22,26 @@ module.exports = {
 
       db.User.findOne({email: req.body.email}, function(err,user){
         if(err){res.json(err)}
+
         // check if a user exists
         if(user){
+
           // compare hashed password
           if(user.checkPassword(req.body.password)){
-            res.json({message: 'login success'})
+
+            // addind token to a logged in user
+            var token = jwt.sign({
+                   name: user.name,
+                   email: user.email
+                 }, secret, {
+                       expiresInMinutes: 1440
+                   });
+               // Send back a success message with the JWT
+               res.json({
+                   success: true,
+                   message: 'You now have a token!',
+                   token: token
+               })
           } else {
             res.json({message: 'password does not match'})
           }
