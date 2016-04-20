@@ -10,7 +10,9 @@ var
     // .delete(ctrl.heroController.destroy)
 
   apiRouter.route('/users')
-    .get(contrl.userController.get)
     .post(contrl.userController.create)
+
+  apiRouter.route('/signIn')
+    .post(contrl.userController.signIn)
 
 module.exports  = apiRouter

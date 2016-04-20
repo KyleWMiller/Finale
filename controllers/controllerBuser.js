@@ -4,7 +4,10 @@ module.exports = {
   userController: {
     create: function(req,res){
       console.log("making new user")
-      db.User.insert({}, function(err,user){
+
+      var user = new db.User(req.body)
+
+      user.save({}, function(err,user){
         if(err){
           res.json(err)
         } else {
@@ -12,14 +15,21 @@ module.exports = {
         }
       })
     },
-    get: function(req,res){
-      console.log('getting user')
-      db.User.find({}, function(err,user){
-        console.log(user)
-        if(err){
-          res.json(err)
+    signIn: function(req,res){
+      console.log('signing in')
+
+      db.User.findOne({email: req.body.email}, function(err,user){
+        if(err){res.json(err)}
+        // check if a user exists
+        if(user){
+          // compare hashed password
+          if(user.checkPassword(req.body.password)){
+            res.json({message: 'login success'})
+          } else {
+            res.json({message: 'password does not match'})
+          }
         } else {
-          res.json(user)
+          res.json({message: 'user does not exist'})
         }
       })
     }
