@@ -12,7 +12,7 @@
    *    without disabling user zoom.
    */
 html {
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -376,7 +376,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Indie Flower", Cursive, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
