@@ -1,3 +1,7 @@
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Schema for Products
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+
 var mongoose = require('mongoose'),
     Schema   = mongoose.Schema,
     productSchema = new Schema ({

@@ -1,9 +1,15 @@
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Server side controller to create api routes for users
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 var db   = require('../models/user-model.js'),
     jwt  = require('jsonwebtoken'),
   secret = "this is so secret"
 
 module.exports = {
   userController: {
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Used to save new user accts
     create: function(req,res){
       console.log("making new user")
 
@@ -17,6 +23,9 @@ module.exports = {
         }
       })
     },
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Sign users in if they have a previously created acct
     signIn: function(req,res){
       console.log('signing in')
 
@@ -29,14 +38,16 @@ module.exports = {
           // compare hashed password
           if(user.checkPassword(req.body.password)){
 
-            // addind token to a logged in user
+            // generates token to a logged in user
+            // lasts for a day
             var token = jwt.sign({
                    name: user.name,
                    email: user.email,
-                   admin: user.admin
+                   admin: false
                  }, secret, {
                        expiresInMinutes: 1440
                    });
+
                // Send back a success message with the JWT
                res.json({
                    success: true,

@@ -1,3 +1,6 @@
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Schema for User profiles and encrypt password
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 var mongoose = require('mongoose'),
     bcrypt   = require('bcryptjs'),
     Schema   = mongoose.Schema,
@@ -13,7 +16,11 @@ var mongoose = require('mongoose'),
         total: Number
       }]
     })
-
+    
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+// Use pre method to excrypt password befor user sign up
+// hits the db
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
     userSchema.pre('save', function(next){
       var user = this
 
@@ -30,7 +37,7 @@ var mongoose = require('mongoose'),
     userSchema.methods.checkPassword = function(pw){
       // Load hash from your password DB.
       var user = this
-      return bcrypt.compareSync(pw, user.password); 
+      return bcrypt.compareSync(pw, user.password);
     }
 
 

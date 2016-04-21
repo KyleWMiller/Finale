@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-    angular.module('myControllers',[])
+    angular.module('MyControllers',[])
       .controller('loginCtrl', loginCtrl)
 
       loginCtrl.$inject = ["Auth", "$location", "$rootScope"]
@@ -23,17 +23,10 @@
 
         lCtrl.doLogin = function(){
           Auth.login(lCtrl.loginData.email, lCtrl.loginData.password)
-            .then(function(response){
-              if(response.success){
-                AuthToken.setToken(response.token)
-                return data
-              })
-
+            .then(function(res){
+              if(response.success)
+                AuthToken.setToken(res.token)
                 $location.path('/home')
-              } else {
-                lCtrl.error = response.message
-              }
-
             })
         }
 
@@ -42,6 +35,5 @@
           lCtrl.user = ''
           $location.path('/')
         }
-
       }
 }());
