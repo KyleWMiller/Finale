@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" dir="ltr">
+<html  ng-app="soilsApp">
   <head>
     <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +19,12 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>
-    </div>
     $(document).foundation();
     </script>
 
     <title>SOILS</title>
   </head>
-  <body>
+  <body ng-controller="loginCtrl as lCtrl">
 
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <!-- Nav Bar -->
@@ -52,80 +51,13 @@
     </div>
 
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<!-- Main Page Picture and Overlay Text -->
+<!-- UI view for SPA -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <div class="overlay-container">
-      <img class="blurCustom" src="http://archwall.xyz/wp-content/uploads/2016/01/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers.jpg"/>
-      <div class="overlay">
-        <h1>
-          <span class="yellowF">S</span>ustainable
-          <span class="yellowF">O</span>rganics
-          <span class="yellowF">I</span>s
-          <span class="yellowF">L</span>iving
-          <span class="yellowF">S</span>oil
-        </h1>
-        <cite class="citedTxt">Ed Kneese</cite>
-    </div>
-  </div>
+    <ui-view></ui-view>
 
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<!-- Footer -->
-<!-- Using footer for login/sign-up validation -->
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <div class="callout large secondary">
-      <div class="row">
-        <div class="large-3 columns">
-          <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-          <!-- Footer Message -->
-          <h3>Why <span class="greenF"><strong>Soils</strong></span>.com?</h3>
-          <h5>Here at <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to <span class="greenF">LIFE</span>! Join the organic revolution today.</h5>
-        </div>
 
-        <div class="large-2 columns">
-          <h4>Site</h4>
-          <ul class="menu vertical">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-            <li>
-              <a href="#">Sign Up</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="large-3 columns">
-          <h4>Products</h4>
-          <ul class="menu vertical">
-            <li>
-              <a href="#">Drainage Enhancers</a>
-            </li>
-            <li>
-              <a href="#">Soil Nutrients</a>
-            </li>
-            <li>
-              <a href="#">Growth Enhancer</a>
-            </li>
-            <li>
-              <a href="#">Minerals</a>
-            </li>
-          </ul>
-        </div>
-        <div class="large-4 columns">
-          <div class="row">
-            <div class="large-2 block">
-              <a class="centered" href="#">Sign Up</a>
-            </div>
-            <div class="large-2">
-              <a href="#">Login</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <script type="text/javascript" src="./JS/authService.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
   </body>
 </html>

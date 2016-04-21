@@ -47,4 +47,10 @@ var
   // .get(ctrl.heroController.buildKey)
   // .post(ctrl.heroController.create)
   // .delete(ctrl.heroController.destroy)
+
+  apiRouter.route('/me')
+  .get(function(req,res){
+    res.send(req.decoded)
+  })
+  
 module.exports  = apiRouter

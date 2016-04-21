@@ -32,7 +32,8 @@ module.exports = {
             // addind token to a logged in user
             var token = jwt.sign({
                    name: user.name,
-                   email: user.email
+                   email: user.email,
+                   admin: user.admin
                  }, secret, {
                        expiresInMinutes: 1440
                    });
