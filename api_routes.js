@@ -27,7 +27,8 @@ var
                   return res.status(403).send({success:false, message:"can't authenticate token"})
               //      - if it CAN be decoded, save the decoded token to the request, and we'll keep processing the request
               } else {
-                  req.decoded = decoded;
+                  console.log("decoding token", decoded);
+                  req.decoded = JSON.stringify(decoded);
                   next()
               }
           })
@@ -38,7 +39,6 @@ var
       }
 
       // ...and then we'll let the request continue on to our app:
-      next()
   })
 
 
@@ -47,4 +47,10 @@ var
     // .get(ctrl.heroController.buildKey)
     // .post(ctrl.heroController.create)
     // .delete(ctrl.heroController.destroy)
+
+  apiRouter.route('/me')
+    .get(function (req,res) {
+      console.log("passed decoded info",req.decoded);
+        res.json(req.decoded)
+    })
 module.exports  = apiRouter

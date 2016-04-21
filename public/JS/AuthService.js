@@ -10,10 +10,6 @@
 
     authFactory.login = function(email, password){
       return $http.post('/api/v1/signIn', {email: email, password: password})
-                .then(function(data){
-                  AuthToken.setToken(data.token)
-                  return data
-                })
     }
     authFactory.logout = function(){
       AuthToken.setToken()
@@ -60,7 +56,8 @@
     return authTokenFactory
   }
 
-  function AuthInterceptor ($q, AuthToken) {
+  function AuthInterceptor ($q, AuthToken,$location) {
+    console.log("AuthInterceptor Running")
     var interceptorFactory = {}
 
     interceptorFactory.request = function(config){
@@ -74,10 +71,9 @@
     }
 
     interceptorFactory.responseError = function(response){
-      if(response.status == 403){
+      console.log("Server Erro")
         $location.path('/')
-      }
-      return $q.reject(response)
+        return $q.reject(response)
     }
     return interceptorFactory
   }

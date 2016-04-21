@@ -37,11 +37,10 @@ module.exports = {
         //Check if a user exists
         if(user){
           //compare hash password
-          console.log(user);
           if(user.comparePw(req.body.password)){
             var token = jwt.sign({
-                   name: user.name,
-                   email: user.email
+                   email: user.email,
+                   id: user._id
                  }, secret, {
                        expiresInMinutes: 1440
                    })
