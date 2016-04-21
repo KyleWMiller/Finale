@@ -1,18 +1,19 @@
-
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*CSS for Home Page*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 .blurCustom {   /*Background Image*/
   opacity: 0.65;
 }
 
 overlay-container {
-  position: relative; /* <-- Set as the reference for the positioned overlay */
+  position: relative; /* Set as the reference for the positioned overlay */
 }
 
 .overlay-container .overlay {
-  position: absolute; /* <-- Remove the overlay from normal flow         */
-  top: 150px;          /* <-- Keep the overlay at the bottom of the box   */
-  left: 50px;            /* <-- Set left and right properties to 0          */
-  right: 0;           /*     In order to expand the overlay horizontally */
-
+  position: absolute; /* Remove the overlay from normal flow */
+  top: 150px;         /* Keep the overlay at the bottom of the box*/
+  left: 50px;         /* Set left and right properties to 0*/
+  right: 0;           /* In order to expand the overlay horizontally */
   padding: 0.4rem;
 }
 
@@ -29,4 +30,28 @@ overlay-container {
 .citedTxt {
   color: #E8E8E8;
   font-size: 2rem;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*CSS for Home Footer*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+.block {
+  text-align: center;
+  white-space: nowrap;
+  height: 100%;
+}
+
+/* The ghost is nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
 }
