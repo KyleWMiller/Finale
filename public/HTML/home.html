@@ -1,77 +1,204 @@
+<script>
+  $(document).foundation()
+</script>
+
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <!-- Home Page -->
 <!-- Picture and Overlay Text -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <div class="overlay-container">
-      <img class="blurCustom" src="http://archwall.xyz/wp-content/uploads/2016/01/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers.jpg"/>
-      <div class="overlay">
-        <h1>
-          <span class="yellowF">S</span>ustainable
-          <span class="yellowF">O</span>rganics
-          <span class="yellowF">I</span>s
-          <span class="yellowF">L</span>iving
-          <span class="yellowF">S</span>oil
-        </h1>
-        <cite class="citedTxt">Ed Kneese</cite>
-    </div>
+<div class="overlay-container">
+  <img class="blurCustom" src="http://archwall.xyz/wp-content/uploads/2016/01/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers.jpg"/>
+  <div class="overlay">
+    <h1>
+      <span class="yellowF">S</span>ustainable
+      <span class="yellowF">O</span>rganics
+      <span class="yellowF">I</span>s
+      <span class="yellowF">L</span>iving
+      <span class="yellowF">S</span>oil
+    </h1>
+    <cite class="citedTxt">Ed Kneese</cite>
   </div>
+</div>
 
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <!-- Footer -->
 <!-- Using footer for login/sign-up validation -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <div class="callout large secondary">
-      <div class="row">
-        <div class="large-3 columns">
-          <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-          <!-- Footer Message -->
-          <h3>Why <span class="greenF"><strong>Soils</strong></span>.com?</h3>
-          <h5>Here at <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to <span class="greenF">LIFE</span>. Join the organic revolution today!</h5>
+<div class="callout large secondary">
+  <div class="row">
+    <div class="large-3 columns">
+
+      <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+      <!-- Footer Message -->
+      <h3>Why
+        <span class="greenF">
+          <strong>Soils</strong>
+        </span>.com?</h3>
+      <h5>Here at
+        <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to
+        <span class="greenF">LIFE</span>.
+        <a ng-click='lCtrl.welcomeSesame()'>Join</a>
+        the organic revolution today!</h5>
+    </div>
+
+    <div class="small-6 large-2 large-offset-1 columns">
+      <h4>Site</h4>
+      <ul class="menu vertical">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">Sign Up</a>
+        </li>
+        <li>
+          <a href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="small-6 large-3 columns">
+      <h4>Products</h4>
+      <ul class="menu vertical">
+        <li>
+          <a href="#">Drainage Enhancers</a>
+        </li>
+        <li>
+          <a href="#">Soil Nutrients</a>
+        </li>
+        <li>
+          <a href="#">Growth Enhancer</a>
+        </li>
+        <li>
+          <a href="#">Minerals</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="small-12 large-3 columns">
+      <div class="row column tall">
+        <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+        <!-- Sign Up modal -->
+        <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+        <!-- Button to open Sign Up modal -->
+        <div class='usrAccess'>
+          <p class="xcenter">
+            <a ng-click='lCtrl.welcomeSesame()'>Sign Up</a>
+          </p>
         </div>
 
-        <div class="small-12 large-2 columns">
-          <h4>Site</h4>
-          <ul class="menu vertical">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-            <li>
-              <a href="#">Sign Up</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </div>
+        <!-- Sign Up modal -->
+        <div class="reveal modi" id="signUpModal" data-reveal>
+          <script>
+            $(document).foundation()
+          </script>
 
-        <div class="small-12 large-3 columns">
-          <h4>Products</h4>
-          <ul class="menu vertical">
-            <li>
-              <a href="#">Drainage Enhancers</a>
-            </li>
-            <li>
-              <a href="#">Soil Nutrients</a>
-            </li>
-            <li>
-              <a href="#">Growth Enhancer</a>
-            </li>
-            <li>
-              <a href="#">Minerals</a>
-            </li>
-          </ul>
-        </div>
-        <div class="small-12 large-4 columns">
-          <div class="column row">
-            <div class="large-2 block">
-              <a class="centered" href="#">Sign Up</a>
+          <!-- Sign Up form -->
+          <form>
+            <div class="row">
+              <h3 class="text-center">Sign Up</h3>
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>First Name</h5></strong>
+                    <input class="modi" type="text" placeholder="Happy">
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>Last Name</h5></strong>
+                    <input class="modi" type="text" placeholder="Golucky">
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>Email</h5></strong>
+                    <input class="modi" type="text" placeholder="example@example.com">
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>Password</h5></strong>
+                    <input class="modi" type="password" placeholder="Dont use dragons">
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>Confirm Password</h5></strong>
+                    <input class="modi" type="password" placeholder="Seriously no dragons">
+                  </label>
+                </div>
+              </div>
+
             </div>
-            <div class="large-2">
-              <a href="#">Login</a>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal small-12 columns">
+              <a ng-click="lCtrl.successSesame()" class="button modButton">Register</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="reveal modi" id="regSuccessModal" data-reveal>
+          <!-- Success Modal -->
+          <h2>Thank you</h2>
+          <p>
+            Thanks for joining the organic side!
+          </p>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+        <!-- Login modal -->
+        <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+        <!-- Button to open Login modal -->
+        <div class="usrAccess">
+          <p class="xcenter">
+            <a ng-click="lCtrl.openSesame()">Login</a>
+          </p>
+        </div>
+
+        <!-- Login modal -->
+        <div class="reveal modi" id="loginModal" data-reveal>
+          <!-- Login form -->
+          <form ng-submit="authFactory.login()">
+            <div class="row">
+              <h3 class="text-center">Login</h3>
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>Email</h5></strong>
+                    <input class="modi" type="text" placeholder="example@example.com" ng-model="lCtrl.loginData.email">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <label><strong><h5>Password</h5></strong>
+                    <input class="modi" type="password" placeholder="iHopeYouHaveAGoodPassword47" ng-model="lCtrl.loginData.password">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal small-12 columns">
+              <input class="button modButton" type="submit" value="Login">
             </div>
           </div>
-        </div>
+        </form>
       </div>
+    </div>
+  </div>

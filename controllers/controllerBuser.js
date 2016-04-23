@@ -41,7 +41,8 @@ module.exports = {
             // generates token to a logged in user
             // lasts for a day
             var token = jwt.sign({
-                   name: user.name,
+                   fName: user.fName,
+                   lName: user.lName,
                    email: user.email,
                    admin: false
                  }, secret, {

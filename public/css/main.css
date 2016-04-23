@@ -1,5 +1,13 @@
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-/*CSS for Home Page*/
+/*Reusables*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+.middle {
+  vertical-align: middle;
+}
+
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*Home Page*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 .blurCustom {   /*Background Image*/
   opacity: 0.65;
@@ -29,11 +37,11 @@ overlay-container {
 
 .citedTxt {
   color: #E8E8E8;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-/*CSS for Home Footer*/
+/*Home Footer*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 .block {
   text-align: center;
@@ -54,4 +62,41 @@ overlay-container {
   display: inline-block;
   vertical-align: middle;
   width: 300px;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*Modals!!!*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+.modi {
+  border-radius: 7px;
+}
+
+.tall {
+  height: 100%;
+}
+
+.usrAccess {
+  border: solid 1px black;
+  border-radius: 7px;
+  background-color: #6E6A68;
+  height: 100px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.xcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.modButton {
+  border: solid 1px black;
+  border-radius: 7px;
+  background-color: #6E6A68;
+  position: relative;
+  color: #5B9EC1;
+  font-size: 2rem;
 }

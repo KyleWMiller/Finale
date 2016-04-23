@@ -7,8 +7,11 @@ var mongoose = require('mongoose'),
     productSchema = new Schema ({
       name: String,
       description: String,
+      quantity: String,
       price: Number,
-      image: String
+      pricePerlbs: Number,
+      image: Buffer,
+      group: String
     })
 
     module.exports = {

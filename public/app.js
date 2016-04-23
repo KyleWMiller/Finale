@@ -5,6 +5,9 @@
     .config(MainRouter)
     .controller('ProductController', ProductController)
 
+    // $('#foo').foundation(); // initialize all plugins
+    // $('.has-tip').foundation(); // initialize all tooltips on the page.
+
 // ========================================================= //
 // Ui-Router
 // ========================================================= //
@@ -20,10 +23,9 @@
           url: '/productPage',
           templateUrl: '/HTML/products.html'
         })
-        .state('Login', {
-          url: '/login',
-          templateUrl: '/HTML/home.html',
-          controller: 'loginCtrl as lCtrl'
+        .state('ContactUsPage', {
+          url: '/contactUs',
+          templateUrl: '/HTML/contactUs.html',
         })
 
         $urlRouterProvider.otherwise('/')
@@ -33,6 +35,8 @@
 // ========================================================= //
 
     function ProductController (){
+
+
 
     }
 }());

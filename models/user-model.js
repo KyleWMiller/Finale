@@ -5,18 +5,18 @@ var mongoose = require('mongoose'),
     bcrypt   = require('bcryptjs'),
     Schema   = mongoose.Schema,
     userSchema = new Schema ({
-      name: String,
+      fName: String,
+      lName: String,
       email: String,
       password: String,
-      admin: Boolean,
-      image: String,
+      admin: false,
       purchaseHistory: String,
       orders : [{
         products: [{}],//reference a product schema
         total: Number
       }]
     })
-    
+
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Use pre method to excrypt password befor user sign up
 // hits the db

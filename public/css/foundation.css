@@ -1605,19 +1605,19 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #cacaca; }
+  color: #3A3B36; }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #cacaca; }
+  color: #3A3B36; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #cacaca; }
+  color: #3A3B36; }
 
 input::placeholder,
 textarea::placeholder {
-  color: #cacaca; }
+  color: #3A3B36; }
 
 input:disabled, input[readonly],
 textarea:disabled,
@@ -2844,6 +2844,7 @@ body.is-reveal-open {
       min-height: 0; } }
   .reveal .column, .reveal .columns,
   .reveal .columns {
+    margin-bottom: 5px;
     min-width: 0; }
   .reveal > :last-child {
     margin-bottom: 0; }
