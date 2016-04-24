@@ -96,7 +96,7 @@
           </script>
 
           <!-- Sign Up form -->
-          <form>
+          <form ng-submt="lCtrl.successSesame()">
             <div class="row">
               <h3 class="text-center">Sign Up</h3>
               <div class="row">
@@ -144,7 +144,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal small-12 columns">
-              <a ng-click="lCtrl.successSesame()" class="button modButton">Register</a>
+              <button type="submit" class="button modButton">Register</button>
             </div>
           </form>
         </div>
@@ -173,7 +173,7 @@
         <!-- Login modal -->
         <div class="reveal modi" id="loginModal" data-reveal>
           <!-- Login form -->
-          <form ng-submit="authFactory.login()">
+          <form ng-submit="lCtrl.doLogin()">
             <div class="row">
               <h3 class="text-center">Login</h3>
               <div class="row">

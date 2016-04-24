@@ -13,16 +13,18 @@
 
 
 <!-- Foundation -->
-    <link rel="stylesheet" href="./css/foundation.css">
-    <link rel="stylesheet" href="./css/main.css" charset="utf-8">
+    <link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="/css/main.css" charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.0.1/what-input.js"></script>
-    <script type="text/javascript" src="./JS/foundation.js"></script>
+    <script type="text/javascript" src="/JS/foundation.js"></script>
 
 <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
 
 
   </head>
+
+
   <body ng-controller="loginCtrl as lCtrl">
 
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
@@ -37,15 +39,16 @@
       <div class="top-bar-right">
         <ul class="menu">
           <li>
-            <a class="greenF" href="#/">Home</a>
+            <a ui-sref="HomePage">Home</a>
           </li>
           <li>
-            <a class="greenF" href="#/productPage">Products</a>
+            <a ui-sref="ProductPage">Products</a>
           </li>
           <li>
-            <a class="greenF" href="#">Contact Us</a>
+            <a ui-sref="ContactUsPage">Contact Us</a>
           </li>
         </ul>
+
       </div>
     </div>
 
@@ -53,16 +56,14 @@
 <!-- UI view for SPA -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
     <ui-view>
-      <a ui-sref="HomePage"></a>
-      <a ui-sref="ProductPage"></a>
     </ui-view>
 
     <!-- AngularJS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
-    <script type="text/javascript" src="./JS/authService.js"></script>
-    <script type="text/javascript" src="./JS/controllerF.js"></script>
-    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="/JS/authService.js"></script>
+    <script type="text/javascript" src="/JS/controllerF.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
 
   </body>
 </html>

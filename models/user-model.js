@@ -9,7 +9,7 @@ var mongoose = require('mongoose'),
       lName: String,
       email: String,
       password: String,
-      admin: false,
+      admin: {type:Boolean, default: false},
       purchaseHistory: String,
       orders : [{
         products: [{}],//reference a product schema

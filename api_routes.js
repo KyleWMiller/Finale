@@ -31,11 +31,13 @@ var
              return res.status(403).send({success:false, message:"can't authenticate token"})
          } else {
            req.decoded = decoded
+           next()
          }
        })
+     }else {
+       res.json({message: "no token provided", success: false})
      }
     // continue to routes: '/products'
-    next()
   })
 
 
@@ -50,7 +52,7 @@ var
 
   apiRouter.route('/me')
   .get(function(req,res){
-    res.send(req.decoded)
+    res.json(req.decoded)
   })
-  
+
 module.exports  = apiRouter

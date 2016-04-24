@@ -16,8 +16,7 @@
       $stateProvider
         .state('HomePage', {
           url: '/',
-          templateUrl: '/HTML/home.html',
-          controller: 'loginCtrl as lCtrl'
+          templateUrl: '/HTML/home.html'
         })
         .state('ProductPage', {
           url: '/productPage',
@@ -25,7 +24,7 @@
         })
         .state('ContactUsPage', {
           url: '/contactUs',
-          templateUrl: '/HTML/contactUs.html',
+          templateUrl: '/HTML/holding.html',
         })
 
         $urlRouterProvider.otherwise('/')

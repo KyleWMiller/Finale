@@ -44,8 +44,10 @@ module.exports = {
                    fName: user.fName,
                    lName: user.lName,
                    email: user.email,
-                   admin: false
-                 }, secret, {
+                   admin: user.admin
+                   },
+                   secret,
+                   {
                        expiresInMinutes: 1440
                    });
 

@@ -3,30 +3,36 @@
     angular.module('MyControllers',[])
       .controller('loginCtrl', loginCtrl)
 
-      loginCtrl.$inject = ["Auth", "$location", "$rootScope"]
+      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state"]
 
 
-      function loginCtrl (Auth,$location,$rootScope) {
+      function loginCtrl (Auth,$location,$rootScope,$state) {
         var lCtrl = this
 
         lCtrl.loggedIn = Auth.isLoggedIn()
 
-        $rootScope.$on('$rootChangeStart', function(){
+        $rootScope.$on('$stateChangeSuccess', function(){
+          console.log("State is being changed")
           lCtrl.loggedIn = Auth.isLoggedIn()
-
+          if(lCtrl.loggedIn){
           Auth.getUser()
             .then(function(response){
               lCtrl.user = response.data
             })
+          } else {
+            $location.path("/")
+          }
         })
 
         lCtrl.doLogin = function(){
-          console.log("=-=-=-=-=-=-=-=-");
+          console.log("=-=-=-=-Do Login=-=-=-=-");
           Auth.login(lCtrl.loginData.email, lCtrl.loginData.password)
             .then(function(res){
-              if(response.success)
-                AuthToken.setToken(res.token)
-                $location.path('/')
+              console.log(res)
+              if(res.data.success){
+                AuthToken.setToken(res.data.token)
+                $state.go('ProductPage')
+              }
             })
         }
 
