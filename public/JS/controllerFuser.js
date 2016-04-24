@@ -2,13 +2,14 @@
   'use strict';
     angular.module('MyControllers',[])
       .controller('loginCtrl', loginCtrl)
+      .controller('signupCtrl', singupCtrl)
 
-      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state","userFactory"]
+      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state","userFactory","$modal"]
 
 
-      function loginCtrl (Auth,$location,$rootScope,$state,userFactory) {
+      function loginCtrl (Auth,$location,$rootScope,$state,userFactory,$modal) {
         var lCtrl = this
-
+        lCtrl.userData = {}
         lCtrl.loggedIn = Auth.isLoggedIn()
 
         $rootScope.$on('$stateChangeSuccess', function(){
@@ -23,7 +24,19 @@
             $location.path("/")
           }
         })
+        lCtrl.openSignUp = function(){
+          console.log("opening signUp modal");
+          var modalInstance = $modal.open({
+            templateUrl: 'signup.html',
+            controller: 'signupCtrl as sCtrl',
+            resolve: {
+              userData: function() {
+                return lCtrl.userData;
+              }
+            }
+          })
 
+        }
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
 // Sign up callback function
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
@@ -71,5 +84,13 @@
           $('#loginModal').foundation('open')
         }
 
+      }
+      function singupCtrl($modalInstance, userData, userFactory){
+        var sCtrl = this
+        sCtrl.submit = function() {
+          console.log("submit biotch")
+          userFactory.makeUser(sCtrl.userData)
+          $modalInstance.close(sCtrl.userData)
+        }
       }
 }());

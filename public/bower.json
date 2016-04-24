@@ -1,0 +1,20 @@
+{
+  "name": "Soil",
+  "homepage": "https://github.com/Aremmer/Finale",
+  "authors": [
+    "Kyle Miller <miller.kwill@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-foundation": "^0.8.0"
+  }
+}
