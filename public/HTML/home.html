@@ -91,18 +91,15 @@
 
         <!-- Sign Up modal -->
         <div class="reveal modi" id="signUpModal" data-reveal>
-          <script>
-            $(document).foundation()
-          </script>
 
           <!-- Sign Up form -->
-          <form ng-submt="userData.makeUser()">
+          <form ng-submt="lCtrl.signUp()">
             <div class="row">
               <h3 class="text-center">Sign Up</h3>
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>First Name</h5></strong>
-                    <input class="modi" type="text" placeholder="Happy" ng-model="">
+                    <input class="modi" type="text" placeholder="Happy" ng-model="lCtrl.userData.makeUser.fName">
                   </label>
                 </div>
               </div>
@@ -110,7 +107,7 @@
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>Last Name</h5></strong>
-                    <input class="modi" type="text" placeholder="Golucky">
+                    <input class="modi" type="text" placeholder="Golucky" ng-model="lCtrl.userData.makeUser.lName">
                   </label>
                 </div>
               </div>
@@ -118,7 +115,7 @@
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>Email</h5></strong>
-                    <input class="modi" type="text" placeholder="example@example.com">
+                    <input class="modi" type="text" placeholder="example@example.com" ng-model="lCtrl.userData.makeUser.email">
                   </label>
                 </div>
               </div>
@@ -134,19 +131,18 @@
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>Confirm Password</h5></strong>
-                    <input class="modi" type="password" placeholder="Seriously no dragons">
+                    <input class="modi" type="password" placeholder="Seriously no dragons" ng-model="lCtrl.userData.makeUser.password">
                   </label>
                 </div>
               </div>
-
             </div>
+          </form>
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal small-12 columns">
               <button type="submit" class="button modButton">Register</button>
             </div>
-          </form>
         </div>
 
         <div class="reveal modi" id="regSuccessModal" data-reveal>

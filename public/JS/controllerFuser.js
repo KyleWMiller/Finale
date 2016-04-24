@@ -3,16 +3,16 @@
     angular.module('MyControllers',[])
       .controller('loginCtrl', loginCtrl)
 
-      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state"]
+      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state","signinFactory","newUsersFactory"]
 
 
-      function loginCtrl (Auth,$location,$rootScope,$state) {
+      function loginCtrl (Auth,$location,$rootScope,$state,signinFactory,newUsersFactory) {
         var lCtrl = this
 
         lCtrl.loggedIn = Auth.isLoggedIn()
 
         $rootScope.$on('$stateChangeSuccess', function(){
-          console.log("State is being changed")
+          // console.log("State is being changed")
           lCtrl.loggedIn = Auth.isLoggedIn()
           if(lCtrl.loggedIn){
           Auth.getUser()
@@ -23,6 +23,20 @@
             $location.path("/")
           }
         })
+
+        lCtrl.signUp = function(){
+          console.log('Submiting new user')
+          userData.makeUser()
+          lCtrl.successSesame()
+          return user
+        }
+
+//=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
+// logic to open success modal inside of sign up
+        lCtrl.successSesame = function() {
+          $('#regSuccessModal').foundation('open')
+        }
+
 
         lCtrl.doLogin = function(){
           console.log("=-=-=-=-Do Login=-=-=-=-");

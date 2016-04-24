@@ -1,12 +1,10 @@
 (function() {
   'use strict';
 
-  angular.module('soilsApp', ['ui.router','authService','MyControllers','productFactory','userFactory'])
+  angular.module('soilsApp', ['ui.router',"authService",'MyControllers','productFactory'])
     .config(MainRouter)
     .controller('ProductController', ProductController)
 
-    // $('#foo').foundation(); // initialize all plugins
-    // $('.has-tip').foundation(); // initialize all tooltips on the page.
 
 // ========================================================= //
 // Ui-Router
