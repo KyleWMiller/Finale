@@ -83,9 +83,9 @@
         <!-- Sign Up modal -->
         <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
         <!-- Button to open Sign Up modal -->
-        <div class='usrAccess'>
+        <div class='usrAccess' ng-click='lCtrl.welcomeSesame()'>
           <p class="xcenter">
-            <a ng-click='lCtrl.welcomeSesame()'>Sign Up</a>
+            Sign Up
           </p>
         </div>
 
@@ -93,13 +93,13 @@
         <div class="reveal modi" id="signUpModal" data-reveal>
 
           <!-- Sign Up form -->
-          <form ng-submt="lCtrl.signUp()">
+          <form ng-submit="lCtrl.signUp()">
             <div class="row">
               <h3 class="text-center">Sign Up</h3>
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>First Name</h5></strong>
-                    <input class="modi" type="text" placeholder="Happy" ng-model="lCtrl.userData.makeUser.fName">
+                    <input class="modi" type="text" placeholder="Happy" ng-model="lCtrl.userData.fName">
                   </label>
                 </div>
               </div>
@@ -107,7 +107,7 @@
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>Last Name</h5></strong>
-                    <input class="modi" type="text" placeholder="Golucky" ng-model="lCtrl.userData.makeUser.lName">
+                    <input class="modi" type="text" placeholder="Golucky" ng-model="lCtrl.userData.lName">
                   </label>
                 </div>
               </div>
@@ -115,7 +115,7 @@
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>Email</h5></strong>
-                    <input class="modi" type="text" placeholder="example@example.com" ng-model="lCtrl.userData.makeUser.email">
+                    <input class="modi" type="text" placeholder="example@example.com" ng-model="lCtrl.userData.email">
                   </label>
                 </div>
               </div>
@@ -131,18 +131,19 @@
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>Confirm Password</h5></strong>
-                    <input class="modi" type="password" placeholder="Seriously no dragons" ng-model="lCtrl.userData.makeUser.password">
+                    <input class="modi" type="password" placeholder="Seriously no dragons" ng-model="lCtrl.userData.password">
                   </label>
                 </div>
               </div>
             </div>
+
+              <button type="submit" class="button modButton">Register</button>
+
           </form>
+
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">&times;</span>
             </button>
-            <div class="modal small-12 columns">
-              <button type="submit" class="button modButton">Register</button>
-            </div>
         </div>
 
         <div class="reveal modi" id="regSuccessModal" data-reveal>
@@ -191,7 +192,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal small-12 columns">
-              <input class="button modButton" type="submit" value="Login">
+              <button class="button modButton" type="submit" >Login</button>
             </div>
           </div>
         </form>

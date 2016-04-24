@@ -1,12 +1,12 @@
 ;
 (function() {
   'use strict'
-  angular.module('authService', ['MyControllers'])
+  angular.module('authService',[])
     .factory('Auth', Auth)
     .factory('AuthInterceptor', AuthInterceptor)
     .factory('AuthToken', AuthToken)
-    .factory('newUsersFactory',newUsersFactory)
-    .factory('signinFactory',signinFactory)
+    .factory('userFactory',userFactory)
+
 
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Token Factory
@@ -96,36 +96,16 @@
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Create Users
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-  function newUsersFactory($http) {
+  function userFactory($http) {
     var userData = {},
       apiUrl = '/api/v1/users'
 
     userData.makeUser = function(user) {
-      console.log('making new user')
+      console.log('making new user', user)
       return $http.post(apiUrl, user)
     }
     return userData
   }
-
-//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Signing in
-//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-
-  signinFactory.$inject = ["$http"]
-
-  function signinFactory($http) {
-    var signIn = {},
-        apiUrl = '/api/v1/signIn'
-
-
-    signIn.knockKnock = function(user) {
-      console.log('signing in')
-      return $http.post(apiUrl,user)
-    }
-    return signIn
-  }
-
-
 
 
 }())

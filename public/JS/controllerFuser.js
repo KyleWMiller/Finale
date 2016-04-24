@@ -3,10 +3,10 @@
     angular.module('MyControllers',[])
       .controller('loginCtrl', loginCtrl)
 
-      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state","signinFactory","newUsersFactory"]
+      loginCtrl.$inject = ["Auth", "$location", "$rootScope","$state","userFactory"]
 
 
-      function loginCtrl (Auth,$location,$rootScope,$state,signinFactory,newUsersFactory) {
+      function loginCtrl (Auth,$location,$rootScope,$state,userFactory) {
         var lCtrl = this
 
         lCtrl.loggedIn = Auth.isLoggedIn()
@@ -24,20 +24,22 @@
           }
         })
 
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
+// Sign up callback function
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
         lCtrl.signUp = function(){
           console.log('Submiting new user')
-          userData.makeUser()
+          userFactory.makeUser(lCtrl.userData)
           lCtrl.successSesame()
-          return user
         }
-
-//=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
 // logic to open success modal inside of sign up
         lCtrl.successSesame = function() {
           $('#regSuccessModal').foundation('open')
         }
 
-
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
+// Login callback function
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
         lCtrl.doLogin = function(){
           console.log("=-=-=-=-Do Login=-=-=-=-");
           Auth.login(lCtrl.loginData.email, lCtrl.loginData.password)
@@ -57,14 +59,12 @@
         }
 
 
-//=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
 // logic to open sign up modal
         lCtrl.welcomeSesame = function() {
           $('#signUpModal').foundation('open')
         }
 
 
-//=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
 // logic to open login modal
         lCtrl.openSesame = function() {
           // console.log($('#loginModal'))
