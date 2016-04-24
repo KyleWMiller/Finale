@@ -21,6 +21,10 @@ var
   apiRouter.route('/signIn')
     .post(contrl.userController.signIn)
 
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
+// Middleware checking browser for token, login auth //
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
   apiRouter.use(function(req, res, next){
     // checks for the user's token in the browser, URI, and HTTP header
      var token = req.body.token || req.param('token') || req.headers['x-access-token']
@@ -42,7 +46,7 @@ var
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
-// route to GET product list //
+// route to get product list //
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
   apiRouter.route('/products')
   .get(ctrl.productController.getAll)
