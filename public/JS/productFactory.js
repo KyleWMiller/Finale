@@ -1,26 +1,17 @@
 (function() {
   'use strict';
   angular.module("userFactory", [])
-    .factory('usersFactory', usersFactory)
-    .factory('signinFactory',signinFactory)
+    .factory('productListFactory', productListFactory)
 
-  function usersFactory($http) {
-    var userData = {},
-      apiUrl = 'http://localhost:3000/api/v1/users'
+  function productListFactory($http) {
+    var productData = {},
+      apiUrl = '/api/v1/products'
 
-    userData.makeUser = function(user) {
+    productData.productList = function() {
       console.log('making new user')
-      return $http.update(apiUrl, user)
+      return $http.read(apiUrl)
     }
   }
 
-
-  function signinFactory($http) {
-
-    userData.signIn = function(email, password) {
-      console.log('signing in')
-      return $http.update(apiUrl, email, password)
-    }
-  }
 
 }());

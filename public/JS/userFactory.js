@@ -6,7 +6,7 @@
 
   function usersFactory($http) {
     var userData = {},
-      apiUrl = 'http://localhost:3000/api/v1/users'
+      apiUrl = '/api/v1/users'
 
     userData.makeUser = function(user) {
       console.log('making new user')
@@ -16,8 +16,11 @@
 
 
   function signinFactory($http) {
+    var signIn = {},
+        apiUrl = '/api/v1/signIn'
 
-    userData.signIn = function(email, password) {
+
+    signIn.knockKnock = function(email, password) {
       console.log('signing in')
       return $http.update(apiUrl, email, password)
     }
