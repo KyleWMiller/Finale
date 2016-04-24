@@ -96,13 +96,13 @@
           </script>
 
           <!-- Sign Up form -->
-          <form ng-submt="lCtrl.successSesame()">
+          <form ng-submt="userData.makeUser()">
             <div class="row">
               <h3 class="text-center">Sign Up</h3>
               <div class="row">
                 <div class="small-12 columns">
                   <label><strong><h5>First Name</h5></strong>
-                    <input class="modi" type="text" placeholder="Happy">
+                    <input class="modi" type="text" placeholder="Happy" ng-model="">
                   </label>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module("userFactory", [])
+  angular.module('productFactory', [])
     .factory('productListFactory', productListFactory)
 
   function productListFactory($http) {

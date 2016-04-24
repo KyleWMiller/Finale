@@ -49,11 +49,6 @@
           $('#signUpModal').foundation('open')
         }
 
-//=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
-// logic to open success modal inside of sign up
-        lCtrl.successSesame = function() {
-          $('#regSuccessModal').foundation('open')
-        }
 
 //=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
 // logic to open login modal

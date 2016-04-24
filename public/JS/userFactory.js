@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module("userFactory", [])
+  angular.module('userFactory', [])
     .factory('usersFactory', usersFactory)
     .factory('signinFactory',signinFactory)
 
@@ -10,8 +10,15 @@
 
     userData.makeUser = function(user) {
       console.log('making new user')
-      return $http.update(apiUrl, user)
+      return $http.post(apiUrl, user)
+      userData.successSesame()
     }
+
+    //=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=/
+    // logic to open success modal inside of sign up
+            userData.successSesame = function() {
+              $('#regSuccessModal').foundation('open')
+            }
   }
 
 
@@ -22,7 +29,7 @@
 
     signIn.knockKnock = function(email, password) {
       console.log('signing in')
-      return $http.update(apiUrl, email, password)
+      return $http.put(apiUrl, email, password)
     }
   }
 

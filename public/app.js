@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('soilsApp', ['ui.router','authService','MyControllers'])
+  angular.module('soilsApp', ['ui.router','authService','MyControllers','productFactory','userFactory'])
     .config(MainRouter)
     .controller('ProductController', ProductController)
 
