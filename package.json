@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "finale",
   "version": "1.0.0",
   "main": "server.js",
@@ -16,21 +15,7 @@
     "jsonwebtoken": "^5.7.0",
     "mongoose": "4.4.11",
     "morgan": "^1.7.0",
-    "path": "^0.12.7"
-  },
-  "description": ""
-=======
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "5.9.1"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
+    "path": "^0.12.7",
     "cool-ascii-faces": "1.3.4",
     "ejs": "2.4.1",
     "express": "4.13.3"
@@ -45,5 +30,4 @@
     "express"
   ],
   "license": "MIT"
->>>>>>> ad73c2882a28c14faa50a8ac9631341d24dc8258
 }
