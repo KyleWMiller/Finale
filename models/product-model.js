@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
       quantity: String,
       price: Number,
       pricePerlbs: Number,
-      image: Buffer,
+      image: String,
       group: String
     })
 

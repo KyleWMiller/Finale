@@ -3,6 +3,7 @@
 
   angular.module('soilsApp', ['ui.router', 'mm.foundation','authService','userControllers','productFactory','productControllers'])
     .config(MainRouter)
+    // .run($rootscope)
 
 
 

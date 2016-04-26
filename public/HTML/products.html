@@ -3,14 +3,15 @@
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <div ng-controller="productCtrl as pCtrl">
   <div>
-    <ul class="large-block-grid-3">
+    <ul class="large-block-grid-3 small-block-grid-4"
+    style="display: inline-block, position: relative">
       <li ng-repeat="p in pCtrl.productList">
         <!-- Product card -->
-        <div class="row" style="display: inline-block, position: relative">
-          <div class="medium-4 columns">
+        <div class="row">
+          <div class="small-12 columns">
             <div class="card">
               <div class="image">
-                <img src="http://static.pexels.com/wp-content/uploads/2014/07/alone-clouds-hills-1909-527x350.jpg">
+                <img ng-src="{{p.image}}">
                 <span class="title">{{p.name}}</span>
               </div>
               <div class="content">
