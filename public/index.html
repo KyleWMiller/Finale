@@ -5,67 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOILS</title>
 
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<!-- Dependencies Links -->
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- Dependencies Links -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
     <meta charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
 
-
-<!-- Foundation -->
+    <!-- Foundation -->
     <link rel="stylesheet" href="/css/foundation.css" charset="utf-8">
     <link rel="stylesheet" href="/css/main.css" charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.0.1/what-input.js"></script>
 
-
-<!-- Google fonts -->
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
   </head>
 
-
   <body>
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- Nav Bar -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<!-- Nav Bar -->
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><h1><strong><em class="greenF">Soils</em></strong></h2></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li>
-            <a ui-sref="HomePage">Home</a>
-          </li>
-          <li>
-            <a ui-sref="ProductPage">Products</a>
-          </li>
-          <li>
-            <a ui-sref="ContactUsPage">Contact Us</a>
-          </li>
-        </ul>
+    <div class="navBarStyle">
 
-      </div>
+
+        <div class="large-4 column tall middle">
+          <ul class="inline-list text-justify">
+            <li>
+              <a class="" href="#/">Home</a>
+            </li>
+            <li>
+              <a href="#/productPage">Products</a>
+            </li>
+            <li>
+              <a href="#/contactUsPage">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="large-4 column">
+          <h1 class="middle">SOILS.com</h1>
+        </div>
+
+        <div class="large-4 column">
+          <div class="row text-justify">
+            <div class="large-6 column text-right ">
+              <a ng-click"lCtrl.openSignUp()">Sign Up</a>
+            </div>
+            <div class="large-6 column text-left">
+              <a ng-click"lCtrl.openLogin()">Login</a>
+            </div>
+          </div>
+        </div>
+
+
     </div>
+    <!-- end of nav -->
 
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<!-- UI view for SPA -->
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <ui-view>
-    </ui-view>
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- UI view for SPA -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <ui-view></ui-view>
+
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- JavaScript dependencies -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 
     <!-- AngularJS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <!-- Ui-router -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <!-- FoundationJS -->
+    <script type="text/javascript" src="/JS/js/foundation/foundation.js"></script>
     <script type="text/javascript" src="/bower_components/angular-foundation/mm-foundation-tpls.js"></script>
-    <script type="text/javascript" src="/JS/authService.js"></script>
+    <script type="text/javascript" src="/JS/js/vendor/modernizr.js"></script>
+    <!-- Controllers -->
     <script type="text/javascript" src="/JS/controllerFuser.js"></script>
-    <script type="text/javascript" src="/JS/productFactory.js"></script>
     <script type="text/javascript" src="/JS/controllerFproduct.js"></script>
+    <!-- Factories -->
+    <script type="text/javascript" src="/JS/authService.js"></script>
+    <script type="text/javascript" src="/JS/productFactory.js"></script>
+    <!-- Main -->
     <script type="text/javascript" src="/app.js"></script>
 
   </body>

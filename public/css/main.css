@@ -1,10 +1,23 @@
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 /*Reusables*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-.middle {
+.middle > * {
   vertical-align: middle;
 }
 
+.tall {
+  height: 100%;
+}
+
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/*Nav Bar*/
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+.navBarStyle {
+  height: 12%;
+  background-color: #1B5E20;
+  color: white;
+}
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 /*Home Page*/
@@ -58,45 +71,8 @@ overlay-container {
   margin-right: -0.25em; /* Adjusts for spacing */
 }
 
-.centered {
-  display: inline-block;
-  vertical-align: middle;
-  width: 300px;
-}
-
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-/*Modals!!!*/
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-.modi {
+.softCorner{
   border-radius: 7px;
 }
 
-.tall {
-  height: 100%;
-}
-
-.usrAccess {
-  border: solid 1px black;
-  border-radius: 7px;
-  background-color: #6E6A68;
-  height: 100px;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.xcenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-}
-
-.modButton {
-  border: solid 1px black;
-  border-radius: 7px;
-  background-color: #6E6A68;
-  position: relative;
-  color: #5B9EC1;
-  font-size: 2rem;
-}
+.
