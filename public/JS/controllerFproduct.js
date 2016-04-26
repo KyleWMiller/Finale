@@ -4,12 +4,13 @@
   .controller('productCtrl',productCtrl)
 
 
-  productCtrl.$inject = ["productListFactory"]
 
   // ========================================================= //
   // Product Controller
   // ========================================================= //
 
+      productCtrl.$inject = ["productListFactory"]
+      
       function productCtrl (productListFactory){
         var pCtrl = this
 

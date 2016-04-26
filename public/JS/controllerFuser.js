@@ -5,6 +5,9 @@
     .controller('loginCtrl', loginCtrl)
     .controller('signupCtrl', signupCtrl)
 
+
+    loginModalCtrl.$inject = ['$modalInstance', '$modal', 'Auth','AuthToken', '$location', '$rootScope', '$state','userFactory']
+
     function loginModalCtrl($modalInstance, $modal, Auth, AuthToken, $location, $rootScope, $state, userFactory) {
       var lmCtrl = this
 
@@ -23,6 +26,7 @@
       }
     }
 
+  loginCtrl.$inject = ['Auth', 'AuthToken', '$location', '$rootScope', '$state', 'userFactory', '$modal']
 
   function loginCtrl(Auth, AuthToken, $location, $rootScope, $state, userFactory, $modal) {
     var lCtrl = this
@@ -84,6 +88,8 @@
 
 
   }
+
+  signupCtrl.$inject = ['$modalInstance', 'userData', 'userFactory', '$modal']
 
   function signupCtrl($modalInstance, userData, userFactory, $modal) {
     var sCtrl = this

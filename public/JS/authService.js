@@ -11,6 +11,8 @@
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Token Factory
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+
+Auth.$inject = ['$http','$q','AuthToken']
   function Auth($http, $q, AuthToken) {
     var authFactory = {}
 
@@ -49,6 +51,8 @@
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Stores token in local storage in browser
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+AuthToken.$inject = ['$window']
+
   function AuthToken($window) {
     var authTokenFactory = {}
 
@@ -70,6 +74,8 @@
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Adds token to each server request
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+Auth.$inject = ['$q','AuthToken','$location']
+
   function AuthInterceptor($q, AuthToken, $location) {
     console.log("AuthInterceptor Running")
     var interceptorFactory = {}
@@ -96,6 +102,8 @@
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Create Users
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
+Auth.$inject = ['$http']
+
   function userFactory($http) {
     var userData = {},
       apiUrl = '/api/v1/users'
