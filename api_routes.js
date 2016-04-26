@@ -28,6 +28,7 @@ var
   apiRouter.use(function(req, res, next){
     // checks for the user's token in the browser, URI, and HTTP header
      var token = req.body.token || req.param('token') || req.headers['x-access-token']
+     console.log(token)
 
      if(token){
        jwt.verify(token, secret, function(err, decoded){
@@ -50,9 +51,7 @@ var
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
   apiRouter.route('/products')
   .get(ctrl.productController.getAll)
-  // .get(ctrl.heroController.buildKey)
-  // .post(ctrl.heroController.create)
-  // .delete(ctrl.heroController.destroy)
+  // .post(ctrl.productController.create)
 
   apiRouter.route('/me')
   .get(function(req,res){

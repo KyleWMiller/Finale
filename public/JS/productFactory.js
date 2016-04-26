@@ -9,8 +9,9 @@
 
     productData.productList = function() {
       console.log('making new user')
-      return $http.read(apiUrl)
+      return $http.get(apiUrl)
     }
+    return productData
   }
 
 

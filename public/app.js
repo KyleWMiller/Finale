@@ -1,9 +1,9 @@
 (function() {
   'use strict';
 
-  angular.module('soilsApp', ['ui.router', 'mm.foundation',"authService",'MyControllers','productFactory'])
+  angular.module('soilsApp', ['ui.router', 'mm.foundation','authService','userControllers','productFactory','productControllers'])
     .config(MainRouter)
-    .controller('ProductController', ProductController)
+
 
 
 // ========================================================= //
@@ -11,6 +11,8 @@
 // ========================================================= //
 
     function MainRouter ($stateProvider, $urlRouterProvider, $httpProvider){
+      $httpProvider.interceptors.push('AuthInterceptor')
+
       $stateProvider
         .state('HomePage', {
           url: '/',
@@ -26,14 +28,5 @@
         })
 
         $urlRouterProvider.otherwise('/')
-    }
-// ========================================================= //
-// Product Controller
-// ========================================================= //
-
-    function ProductController (){
-
-
-
     }
 }());

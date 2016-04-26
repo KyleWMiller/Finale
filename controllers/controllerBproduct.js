@@ -20,9 +20,9 @@ module.exports = {
     },
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Returns a single item from the product db
-    getOne: function(req,res){
-      console.log("grabbing item")
-      db.Product.findOne({name: params.name},{description:1, _id:0})
-    }
+    // getOne: function(req,res){
+    //   console.log("grabbing item")
+    //   db.Product.findOne({name: params.name},{description:1, _id:0})
+    // }
   }
 }
