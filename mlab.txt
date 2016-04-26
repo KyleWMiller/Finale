@@ -1,0 +1,1 @@
+mongoimport -h ds021711.mlab.com:21711 -d soils -c products -u Aremmer -p Elfkid20 --file models/products.json

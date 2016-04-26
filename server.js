@@ -1,5 +1,5 @@
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-// Server 
+// Server
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 
 var express = require('express'),
@@ -11,7 +11,7 @@ var express = require('express'),
   port = process.env.PORT || 3000,
   apiRoutes = require('./api_routes.js'),
   mongoose = require('mongoose'),
-  databaseURL = "mongodb://localhost:27017/soils"
+  databaseURL = "mongodb://Aremmer:Elfkid20@ds021711.mlab.com:21711/soils"
 
 mongoose.connect(databaseURL, function(err){
   if(err){

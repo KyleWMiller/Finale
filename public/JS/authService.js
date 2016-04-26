@@ -74,7 +74,7 @@ AuthToken.$inject = ['$window']
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Adds token to each server request
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-Auth.$inject = ['$q','AuthToken','$location']
+AuthInterceptor.$inject = ['$q','AuthToken','$location']
 
   function AuthInterceptor($q, AuthToken, $location) {
     console.log("AuthInterceptor Running")
@@ -102,7 +102,7 @@ Auth.$inject = ['$q','AuthToken','$location']
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
 // Create Users
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=//
-Auth.$inject = ['$http']
+
 
   function userFactory($http) {
     var userData = {},
