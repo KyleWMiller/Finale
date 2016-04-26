@@ -4,202 +4,206 @@
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <div ng-controller="loginCtrl as lCtrl">
 
-<div class="overlay-container">
-  <img class="blurCustom" src="/Images/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers.jpg"/>
-  <div class="overlay">
-    <h1>
-      <span class="yellowF">S</span>ustainable
-      <span class="yellowF">O</span>rganics
-      <span class="yellowF">I</span>s
-      <span class="yellowF">L</span>iving
-      <span class="yellowF">S</span>oil
-    </h1>
-    <cite class="citedTxt">Ed Kneese</cite>
-  </div>
-</div>
+  <div class="overlay-container">
+    <img class="blurCustom" src="/Images/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers.jpg"/>
+    <div class="overlay">
+      <div class="">
+        <h1>
+          <span class="yellowF">S</span>ustainable
+          <span class="yellowF">O</span>rganics
+          <span class="yellowF">I</span>s
+          <span class="yellowF">L</span>iving
+          <span class="yellowF">S</span>oil
+        </h1>
+        <cite class="citedTxt">Ed Kneese</cite>
+      </div>
 
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<!-- Footer -->
-<!-- Using footer for login/sign-up validation -->
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<div class="callout large secondary">
-  <div class="row">
-    <div class="large-3 columns">
+      <div class="small-12 columns">
+        <div class="row column tall">
+
+          <!-- Button to open Sign Up modal -->
+          <div class="row small-8 small-offset-3 modButton">
+            <div class='button softCorner' ng-click='lCtrl.openSignUp()'>
+              <p class="xcenter">
+                Sign Up
+              </p>
+            </div>
+          </div>
+
+          <!-- Button to open Login modal -->
+          <div class="row small-8 small-offset-3 modButton">
+            <div class='button softCorner' ng-click='lCtrl.openLogin()'>
+              <p class="xcenter">
+                Login
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+  <!-- Footer -->
+  <!-- Using footer for login/sign-up validation -->
+  <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+  <div class="callout large secondary">
+    <div class="row">
+      <div class="large-4 columns">
+
+        <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+        <!-- Footer Message -->
+        <h3>Why
+          <span class="greenF">
+            <strong>Soils</strong>
+          </span>.com?</h3>
+        <h5>Here at
+          <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to
+          <span class="greenF">LIFE</span>.
+          <a ng-click='lCtrl.welcomeSesame()'>Join</a>
+          the organic revolution today!</h5>
+      </div>
+
+      <div class="small-6 large-3 large-offset-1 columns">
+        <h4>Site</h4>
+        <ul class="menu vertical">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Sign Up</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="small-6 large-4 columns ">
+        <h4>Products</h4>
+        <ul class="menu vertical">
+          <li>
+            <a href="#">Drainage Enhancers</a>
+          </li>
+          <li>
+            <a href="#">Soil Nutrients</a>
+          </li>
+          <li>
+            <a href="#">Growth Enhancer</a>
+          </li>
+          <li>
+            <a href="#">Minerals</a>
+          </li>
+        </ul>
+      </div>
 
       <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-      <!-- Footer Message -->
-      <h3>Why
-        <span class="greenF">
-          <strong>Soils</strong>
-        </span>.com?</h3>
-      <h5>Here at
-        <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to
-        <span class="greenF">LIFE</span>.
-        <a ng-click='lCtrl.welcomeSesame()'>Join</a>
-        the organic revolution today!</h5>
-    </div>
+      <!-- End Footer -->
+      <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 
-    <div class="small-6 large-2 large-offset-1 columns">
-      <h4>Site</h4>
-      <ul class="menu vertical">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-        <li>
-          <a href="#">Sign Up</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
-      </ul>
-    </div>
+      <!-- Sign Up modal -->
+      <script type="text/ng-template" id="signupModal.html">
 
-    <div class="small-6 large-3 columns ">
-      <h4>Products</h4>
-      <ul class="menu vertical">
-        <li>
-          <a href="#">Drainage Enhancers</a>
-        </li>
-        <li>
-          <a href="#">Soil Nutrients</a>
-        </li>
-        <li>
-          <a href="#">Growth Enhancer</a>
-        </li>
-        <li>
-          <a href="#">Minerals</a>
-        </li>
-      </ul>
-    </div>
+        <!-- Sign Up form -->
+        <div class="row">
+          <h3 class="text-center">Sign Up</h3>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>First Name</h5>
+                </strong>
+                <input class="modi" type="text" placeholder="Happy" ng-model="sCtrl.userData.fName">
+              </label>
+            </div>
+          </div>
 
-    <div class="small-12 large-3 columns">
-      <div class="row column tall">
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>Last Name</h5>
+                </strong>
+                <input class="modi" type="text" placeholder="Golucky" ng-model="sCtrl.userData.lName">
+              </label>
+            </div>
+          </div>
 
-        <!-- Button to open Sign Up modal -->
-        <div class="row small-12 modButton">
-          <div class='button' ng-click='lCtrl.openSignUp()'>
-            <p class="xcenter">
-              Sign Up
-            </p>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>Email</h5>
+                </strong>
+                <input class="modi" type="text" placeholder="example@example.com" ng-model="sCtrl.userData.email">
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>Password</h5>
+                </strong>
+                <input class="modi" type="password" placeholder="Dont use dragons">
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>Confirm Password</h5>
+                </strong>
+                <input class="modi" type="password" placeholder="Seriously no dragons" ng-model="sCtrl.userData.password">
+              </label>
+            </div>
           </div>
         </div>
 
-        <!-- Button to open Login modal -->
-        <div class="row small-12 modButton">
-          <div class='button' ng-click='lCtrl.openLogin()'>
-            <p class="xcenter">
-              Login
-            </p>
-          </div>
-        </div>
-
+        <button type="button" ng-click='sCtrl.submit()' class="button modButton">Register</button>
       </div>
-    </div>
-    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-    <!-- End Footer -->
-    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    </script>
+    <!-- Login modal -->
+    <script type="text/ng-template" id="loginModal.html">
 
-    <!-- Sign Up modal -->
-    <script type="text/ng-template" id="signupModal.html">
-
-      <!-- Sign Up form -->
-      <div class="row">
-        <h3 class="text-center">Sign Up</h3>
+      <!-- Login form -->
+      <form ng-submit="lmCtrl.doLogin()">
         <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>First Name</h5>
-              </strong>
-              <input class="modi" type="text" placeholder="Happy" ng-model="sCtrl.userData.fName">
-            </label>
+          <h3 class="text-center">Login</h3>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>Email</h5>
+                </strong>
+                <input class="modi" type="text" placeholder="example@example.com" ng-model="lmCtrl.loginData.email">
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>
+                <strong>
+                  <h5>Password</h5>
+                </strong>
+                <input class="modi" type="password" placeholder="iHopeYouHaveAGoodPassword47" ng-model="lmCtrl.loginData.password">
+              </label>
+            </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>Last Name</h5>
-              </strong>
-              <input class="modi" type="text" placeholder="Golucky" ng-model="sCtrl.userData.lName">
-            </label>
-          </div>
+        <div class="modal small-12 columns">
+          <button class="button modButton" type="submit">Login</button>
         </div>
-
-        <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>Email</h5>
-              </strong>
-              <input class="modi" type="text" placeholder="example@example.com" ng-model="sCtrl.userData.email">
-            </label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>Password</h5>
-              </strong>
-              <input class="modi" type="password" placeholder="Dont use dragons">
-            </label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>Confirm Password</h5>
-              </strong>
-              <input class="modi" type="password" placeholder="Seriously no dragons" ng-model="sCtrl.userData.password">
-            </label>
-          </div>
-        </div>
-      </div>
-
-      <button type="button" ng-click='sCtrl.submit()' class="button modButton">Register</button>
-    </div>
-  </script>
-  <!-- Login modal -->
-  <script type="text/ng-template" id="loginModal.html">
-
-    <!-- Login form -->
-    <form ng-submit="lmCtrl.doLogin()">
-      <div class="row">
-        <h3 class="text-center">Login</h3>
-        <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>Email</h5>
-              </strong>
-              <input class="modi" type="text" placeholder="example@example.com" ng-model="lmCtrl.loginData.email">
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-12 columns">
-            <label>
-              <strong>
-                <h5>Password</h5>
-              </strong>
-              <input class="modi" type="password" placeholder="iHopeYouHaveAGoodPassword47" ng-model="lmCtrl.loginData.password">
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="modal small-12 columns">
-        <button class="button modButton" type="submit">Login</button>
-      </div>
-    </form>
-  </script>
+      </form>
+    </script>
 
     <!-- Success modal -->
     <script type="text/ng-template" id="successModal.html">
@@ -215,9 +219,7 @@
       </div>
     </script>
 
-
-
-      </div>
-    </div>
-
   </div>
+</div>
+
+</div>
