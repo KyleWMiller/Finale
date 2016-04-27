@@ -10,7 +10,7 @@
       apiUrl = '/api/v1/products'
 
     productData.productList = function() {
-      console.log('making new user')
+      console.log('product list')
       return $http.get(apiUrl)
     }
     return productData

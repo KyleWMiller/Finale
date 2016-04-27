@@ -3,7 +3,10 @@
 
   angular.module('soilsApp', ['ui.router', 'mm.foundation','authService','userControllers','productFactory','productControllers','ngCart'])
     .config(MainRouter)
-    // .run($rootscope)
+    .controller ('myCtrl', ['$scope', '$http', 'ngCart', function($scope, $http, ngCart) {
+      ngCart.setTaxRate(8.6)
+      ngCart.setShipping(4.99)
+    }])
 
 
 
@@ -27,6 +30,11 @@
           url: '/contactUs',
           templateUrl: '/HTML/holding.html',
         })
+        .state('CartPage', {
+          url: '/cart',
+          templateUrl: '/HTML/cart.html',
+        })
+
 
         $urlRouterProvider.otherwise('/')
     }
