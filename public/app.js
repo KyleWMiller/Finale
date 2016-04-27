@@ -1,8 +1,12 @@
 (function() {
   'use strict';
 
-  angular.module('soilsApp', ['ui.router', 'mm.foundation','authService','userControllers','productFactory','productControllers'])
+  angular.module('soilsApp', ['ui.router', 'mm.foundation','authService','userControllers','productFactory','productControllers','ngCart'])
     .config(MainRouter)
+    .controller ('myCtrl', ['$scope', '$http', 'ngCart', function($scope, $http, ngCart) {
+    // ngCart.setTaxRate(7.5)
+    // ngCart.setShipping(2.99)
+    } ])
     // .run($rootscope)
 
 
