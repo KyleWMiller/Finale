@@ -1,0 +1,20 @@
+{
+  "name": "finale",
+  "main": "server.js",
+  "homepage": "https://github.com/Aremmer/Finale",
+  "authors": [
+    "Kyle Miller <miller.kwill@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ngCart": "ngcart#^1.0.0"
+  }
+}

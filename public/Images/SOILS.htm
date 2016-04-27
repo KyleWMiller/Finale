@@ -1,11 +1,78 @@
-<!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths ng-scope" lang="en" ng-app="soilsApp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOILS</title>
+
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- Dependencies Links -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    
+    <script type="text/javascript" src="./SOILS_files/jquery.js"></script><style type="text/css"></style>
+
+    <!-- Foundation -->
+    <link rel="stylesheet" href="./SOILS_files/foundation.css" charset="utf-8">
+    <link rel="stylesheet" href="./SOILS_files/main.css" charset="utf-8">
+    <script type="text/javascript" src="./SOILS_files/what-input.js"></script>
+
+    <!-- Google fonts -->
+    <link href="./SOILS_files/css" rel="stylesheet" type="text/css">
+    <link href="./SOILS_files/css(1)" rel="stylesheet" type="text/css">
+  <style></style></head>
+
+  <body cz-shortcut-listen="true">
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- Nav Bar -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+
+    <div class="navBarStyle">
+
+
+        <div class="large-4 column tall middle">
+          <ul class="inline-list text-justify tall">
+            <li>
+              <a class="middle" href="http://localhost:3000/#/">Home</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/#/productPage">Products</a>
+            </li>
+            <li>
+              <a href="http://localhost:3000/#/contactUsPage">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="large-4 column">
+          <h1 class="middle">SOILS.com</h1>
+        </div>
+
+        <div class="large-4 column">
+          <div class="row text-justify">
+            <div class="large-6 column text-right ">
+              <a ng-click"lctrl.opensignup()"="">Sign Up</a>
+            </div>
+            <div class="large-6 column text-left">
+              <a ng-click"lctrl.openlogin()"="">Login</a>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+    <!-- end of nav -->
+
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- UI view for SPA -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- uiView: undefined --><ui-view class="ng-scope"><!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <!-- Home Page -->
 <!-- Picture and Overlay Text -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
-<div ng-controller="loginCtrl as lCtrl">
+<div ng-controller="loginCtrl as lCtrl" class="ng-scope">
 
   <div class="overlay-container">
-    <img class="blurCustom" src="/Images/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers-compressor.jpg"/>
+    <img class="blurCustom" src="./SOILS_files/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers-compressor.jpg">
     <div class="overlay">
       <div class="">
         <h1>
@@ -23,7 +90,7 @@
 
           <!-- Button to open Sign Up modal -->
           <div class="row small-8 small-offset-3 modButton">
-            <div class='button softCorner' ng-click='lCtrl.openSignUp()'>
+            <div class="button softCorner" ng-click="lCtrl.openSignUp()">
               <p class="xcenter">
                 Sign Up
               </p>
@@ -32,7 +99,7 @@
 
           <!-- Button to open Login modal -->
           <div class="row small-8 small-offset-3 modButton">
-            <div class='button softCorner' ng-click='lCtrl.openLogin()'>
+            <div class="button softCorner" ng-click="lCtrl.openLogin()">
               <p class="xcenter">
                 Login
               </p>
@@ -61,7 +128,7 @@
         <h5>Here at
           <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to
           <span class="greenF">LIFE</span>.
-          <a ng-click='lCtrl.welcomeSesame()'>Join</a>
+          <a ng-click="lCtrl.welcomeSesame()">Join</a>
           the organic revolution today!</h5>
       </div>
 
@@ -69,16 +136,16 @@
         <h4>Site</h4>
         <ul class="menu vertical">
           <li>
-            <a href="#">Home</a>
+            <a href="http://localhost:3000/#">Home</a>
           </li>
           <li>
-            <a href="#">Contact Us</a>
+            <a href="http://localhost:3000/#">Contact Us</a>
           </li>
           <li>
-            <a href="#">Sign Up</a>
+            <a href="http://localhost:3000/#">Sign Up</a>
           </li>
           <li>
-            <a href="#">Login</a>
+            <a href="http://localhost:3000/#">Login</a>
           </li>
         </ul>
       </div>
@@ -87,16 +154,16 @@
         <h4>Products</h4>
         <ul class="menu vertical">
           <li>
-            <a href="#">Drainage Enhancers</a>
+            <a href="http://localhost:3000/#">Drainage Enhancers</a>
           </li>
           <li>
-            <a href="#">Soil Nutrients</a>
+            <a href="http://localhost:3000/#">Soil Nutrients</a>
           </li>
           <li>
-            <a href="#">Growth Enhancer</a>
+            <a href="http://localhost:3000/#">Growth Enhancer</a>
           </li>
           <li>
-            <a href="#">Minerals</a>
+            <a href="http://localhost:3000/#">Minerals</a>
           </li>
         </ul>
       </div>
@@ -222,3 +289,31 @@
 </div>
 
 </div>
+</ui-view>
+
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <!-- JavaScript dependencies -->
+    <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+
+    <!-- AngularJS -->
+    <script type="text/javascript" src="./SOILS_files/angular.js"></script>
+    <!-- Ui-router -->
+    <script type="text/javascript" src="./SOILS_files/angular-ui-router.js"></script>
+    <!-- FoundationJS -->
+    <script type="text/javascript" src="./SOILS_files/foundation.js"></script>
+    <script type="text/javascript" src="./SOILS_files/mm-foundation-tpls.js"></script>
+    <script type="text/javascript" src="./SOILS_files/modernizr.js"></script>
+    <!-- NGCart -->
+    <script type="text/javascript" src="./SOILS_files/ngCart.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="./SOILS_files/controllerFuser.js"></script>
+    <script type="text/javascript" src="./SOILS_files/controllerFproduct.js"></script>
+    <!-- Factories -->
+    <script type="text/javascript" src="./SOILS_files/authService.js"></script>
+    <script type="text/javascript" src="./SOILS_files/productFactory.js"></script>
+    <!-- Main -->
+    <script type="text/javascript" src="./SOILS_files/app.js"></script>
+
+  
+
+</body></html>

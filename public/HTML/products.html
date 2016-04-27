@@ -1,10 +1,11 @@
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <!-- Products Page -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
+<!-- ngCart -->
 <div ng-controller="productCtrl as pCtrl">
   <div>
-    <ul class="large-block-grid-3 small-block-grid-4"
-    style="display: inline-block, position: relative">
+    <ul class="large-block-grid-3"
+    style="display: inline-block, position: relative, height:20%;">
       <li ng-repeat="p in pCtrl.productList">
         <!-- Product card -->
         <div class="row">
@@ -20,23 +21,24 @@
               <div class="action">
                 <a href='#'>Add to Cart</a>
               </div>
+
+              <ngcart-addtocart id="{{ item._id.$oid }}" name="{{ item.name }}" price="{{ item.price }}" quantity="1" quantity-max="30" data="item"></ngcart-addtocart>
+
             </div>
           </div>
         </div>
       </li>
     </ul>
-
   </div>
-
 </div>
 
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <!-- Footer -->
-<!-- Using footer for login/sign-up validation -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <div class="callout large secondary">
   <div class="row">
-    <div class="large-3 columns">
+    <div class="large-4 columns">
+
       <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
       <!-- Footer Message -->
       <h3>Why
@@ -45,10 +47,12 @@
         </span>.com?</h3>
       <h5>Here at
         <span class="greenF">Soils</span>.com, we don't just promote the orgamic soil soultion we bring entire soil ecosystems to
-        <span class="greenF">LIFE</span>! Join the organic revolution today.</h5>
+        <span class="greenF">LIFE</span>.
+        <a ng-click='lCtrl.welcomeSesame()'>Join</a>
+        the organic revolution today!</h5>
     </div>
 
-    <div class="small-12 large-2 columns">
+    <div class="small-6 large-3 large-offset-1 columns">
       <h4>Site</h4>
       <ul class="menu vertical">
         <li>
@@ -66,7 +70,7 @@
       </ul>
     </div>
 
-    <div class="small-12 large-3 columns">
+    <div class="small-6 large-4 columns ">
       <h4>Products</h4>
       <ul class="menu vertical">
         <li>
@@ -83,14 +87,3 @@
         </li>
       </ul>
     </div>
-    <div class="small-12 large-4 columns">
-      <div class="column row">
-        <div class="large-2 block">
-          <a class="centered" href="#">Sign Up</a>
-        </div>
-        <div class="large-2">
-          <a href="#">Login</a>
-        </div>
-      </div>
-    </div>
-  </div>
