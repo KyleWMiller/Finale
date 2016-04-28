@@ -7,6 +7,17 @@
   transform: translate(50%,50%);
 }
 
+.small {
+  font-size: .7rem;
+}
+.medi {
+  font-size: 1.7rem;
+}
+.lrg {
+  font-size: 3rem;
+}
+
+
 .tall {
   height: 100%;
 }
@@ -16,14 +27,32 @@
   position: relative;
 }
 
+.overCite {
+  margin:7%;
+}
+
+.shadow {
+  text-shadow: 0 0 5px black;
+}
+
+.almost {
+  margin-top: 40%;
+}
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 /*Nav Bar*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 .navBarStyle {
-  height: 12%;
   background-color: #1B5E20;
   color: white;
+}
+
+.gradient {
+  background: #667280; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #1B5E20 , #667280); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right top, #1B5E20, #667280); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right top, #1B5E20, #667280); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right top, #1B5E20 , #667280); /* Standard syntax */
 }
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
@@ -39,8 +68,8 @@ overlay-container {
 
 .overlay-container .overlay {
   position: absolute; /* Remove the overlay from normal flow */
-  top: 150px;         /* Keep the overlay at the bottom of the box*/
-  left: 50px;         /* Set left and right properties to 0*/
+  top: 50px;         /* Keep the overlay at the bottom of the box*/
+  left: 0;         /* Set left and right properties to 0*/
   right: 0;           /* In order to expand the overlay horizontally */
   padding: 0.4rem;
   height: 100%;
@@ -87,10 +116,6 @@ overlay-container {
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 /*Product tile*/
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
-
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
-html, body {
-  background: #FAFAFA; }
 
 .card {
   font-family: 'Roboto', sans-serif;

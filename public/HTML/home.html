@@ -3,45 +3,43 @@
 <!-- Picture and Overlay Text -->
 <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 <div ng-controller="loginCtrl as lCtrl">
-
-  <div class="overlay-container">
-    <img class="blurCustom" src="/Images/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers-compressor.jpg"/>
-    <div class="overlay">
-      <div class="">
-        <h1>
-          <span class="yellowF">S</span>ustainable
-          <span class="yellowF">O</span>rganics
-          <span class="yellowF">I</span>s
-          <span class="yellowF">L</span>iving
-          <span class="yellowF">S</span>oil
-        </h1>
-        <cite class="citedTxt">Ed Kneese</cite>
-      </div>
-
-      <div class="small-12 columns">
-        <div class="row column tall">
-
-          <!-- Button to open Sign Up modal -->
-          <div class="row small-8 small-offset-3 modButton">
-            <div class='button softCorner' ng-click='lCtrl.openSignUp()'>
-              <p class="xcenter">
-                Sign Up
-              </p>
-            </div>
-          </div>
-
-          <!-- Button to open Login modal -->
-          <div class="row small-8 small-offset-3 modButton">
-            <div class='button softCorner' ng-click='lCtrl.openLogin()'>
-              <p class="xcenter">
-                Login
-              </p>
-            </div>
-          </div>
-
+  <div class="">
+    <div class="overlay-container">
+      <img class="blurCustom" src="/Images/houses-dilapidated-cabin-horse-farm-hdr-clouds-field-abandoned-cottage-trees-sky-landscape-wallpapers-compressor.jpg"/>
+      <div class="overlay">
+        <div class="row overCite">
+          <h1>
+            <span class="yellowF">S</span>ustainable
+            <span class="yellowF">O</span>rganics
+            <span class="yellowF">I</span>s
+            <span class="yellowF">L</span>iving
+            <span class="yellowF">S</span>oil
+          </h1>
+          <cite class="citedTxt">~ Ed Kneese</cite>
         </div>
-      </div>
 
+        <div class="small-12 large-centered columns">
+          <div class="row column tall">
+
+            <div class="row small-12 small-offset-8 modButton">
+              <!-- Button to open Sign Up modal -->
+              <div class='button softCorner almost' ng-click='lCtrl.openSignUp()'>
+                <p class="xcenter">
+                  | Sign Up |
+                </p>
+              </div>
+
+              <!-- Button to open Login modal -->
+              <div class='button softCorner almost' ng-click='lCtrl.openLogin()'>
+                <p class="xcenter">
+                  | Login |
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end overlay -->
+      </div>
     </div>
   </div>
 
@@ -79,6 +77,9 @@
           </li>
           <li>
             <a href="#">Login</a>
+          </li>
+          <li>
+            <a href="#">Cart</a>
           </li>
         </ul>
       </div>

@@ -18,7 +18,7 @@
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -26,40 +26,28 @@
     <!-- Nav Bar -->
     <!--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 
-    <div class="navBarStyle">
+    <div class="top-bar navBarStyle" data-topbar role="navigation">
+
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a href="#/"><span class="lrg">Soils.com</span></a>
+          </h1>
+        </li>
+
+      </ul>
 
 
-        <div class="large-4 column tall middle">
-          <ul class="inline-list text-justify tall">
-            <li>
-              <a class="middle" href="#/">Home</a>
-            </li>
-            <li>
-              <a href="#/productPage">Products</a>
-            </li>
-            <li>
-              <a href="#/contactUsPage">Contact Us</a>
-            </li>
-            <li>
-              <a href="#/cart">Cart</a>
-            </li>
-          </ul>
-        </div>
+      <section class="top-bar-section">
+         <!-- Right Nav Section -->
+         <ul class="right">
+           <li><a href="#/">Home</a></li>
+           <li><a href="#/productPage">Products</a></li>
+           <li><a href="#/cart">Cart</a></li>
+           <li><a href="#/contactUsPage">Contact Us</a></li>
+         </ul>
 
-        <div class="large-4 column">
-          <h1 class="middle">SOILS.com</h1>
-        </div>
-
-        <div class="large-4 column">
-          <div class="row text-justify">
-            <div class="large-6 column text-right ">
-              <a ng-click"lCtrl.openSignUp()">Sign Up</a>
-            </div>
-            <div class="large-6 column text-left">
-              <a ng-click"lCtrl.openLogin()">Login</a>
-            </div>
-          </div>
-        </div>
+       </section>
 
 
     </div>

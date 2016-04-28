@@ -1,6 +1,20 @@
-<hr/>
-    <h3>Cart </h3>
+    <div class="overlay-container">
+      <img class="blurCustom" src="../Images/cart-img.jpg"/>
+      <div class="overlay">
 
-    <ngcart-cart></ngcart-cart>
+        <hr>
+            <h3 style="margin-left: 15%;">Cart </h3>
 
-    <hr/>
+            <ngcart-cart></ngcart-cart>
+
+            <hr/>
+<div class="row">
+  <div class="large-12 large-centered">
+    <button class="" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+
+  </div>
+</div>
+
+        <!-- end overlay -->
+      </div>
+    </div>
